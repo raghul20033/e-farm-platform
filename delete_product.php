@@ -1,26 +1,31 @@
 <?php
 session_start();
-include("../config/db.php");
+include '../db_connect.php';
 
-// Check if product id is passed
-if (isset($_GET['id']) && is_numeric($_GET['id'])) {
-    $id = intval($_GET['id']);
+if (!isset($_SESSION['farmer_id'])) {
+    header("Location: ../farmer/login.html");
+    exit();
+}
 
-    // Prepare SQL to delete product
-    $stmt = $conn->prepare("DELETE FROM products WHERE id = ?");
-    $stmt->bind_param("i", $id);
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['product_id'])) {
+    $productId = intval($_POST['product_id']);
+    $farmerId = $_SESSION['farmer_id'];
+
+    // Debug: check IDs
+    // echo "Trying to delete Product ID: $productId for Farmer ID: $farmerId"; exit;
+
+    $stmt = $conn->prepare("DELETE FROM products WHERE id = ? AND farmer_id = ?");
+    $stmt->bind_param("ii", $productId, $farmerId);
 
     if ($stmt->execute()) {
-        // Redirect with success message
-        header("Location: manage_products.php?msg=Product+deleted+successfully");
-        exit();
+        if ($stmt->affected_rows > 0) {
+            header("Location: ../farmer/your_products.php?success=1");
+            exit();
+        } else {
+            echo "⚠️ No product deleted. Either product doesn’t exist or doesn’t belong to you.";
+        }
     } else {
-        echo "❌ Error deleting product: " . $conn->error;
+        echo "❌ SQL Error: " . $stmt->error;
     }
-
-    $stmt->close();
-    $conn->close();
-} else {
-    echo "⚠️ Invalid product ID.";
 }
 ?>

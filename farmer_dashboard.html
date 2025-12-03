@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Farmer Dashboard</title>
+  <link rel="stylesheet" href="../css/farmer_dashboard.css" />
+  <link rel="stylesheet" href="../assets/css/farmer_dashboard.css">
+
+</head>
+<body>
+  <header>
+    <h1>Welcome, Farmer!</h1>
+    <a href="../backend/logout.php" class="logout-btn">Logout</a>
+  </header>
+
+  <section class="add-product">
+    <h2>Add Product</h2>
+    <form action="../backend/add_product.php" method="POST" enctype="multipart/form-data">
+      <input type="text" name="name" placeholder="Product Name" required />
+      <input type="number" name="price" placeholder="Price" step="0.01" required />
+      <input type="number" name="discount" placeholder="Discount (%)" />
+      <input type="file" name="image" accept="image/*" required />
+      <button type="submit">Add Product</button>
+    </form>
+  </section>
+
+  <section class="notifications">
+    <h2>Order Notifications</h2>
+    <div id="notifications"></div>
+  </section>
+
+  <section class="transactions">
+    <h2>Transaction History</h2>
+    <div id="transactions"></div>
+  </section>
+
+  <script src="../js/farmer_dashboard.js"></script>
+</body>
+</html>

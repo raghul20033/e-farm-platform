@@ -1,0 +1,81 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background: url('https://images.unsplash.com/photo-1534081333815-ae5019106622?auto=format&fit=crop&w=1950&q=80') center center / cover no-repeat fixed;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-container {
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 16px;
+  padding: 40px 30px;
+  width: 100%;
+  max-width: 400px;
+  color: #fff;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  text-align: center;
+}
+
+.form-container h2 {
+  margin-bottom: 25px;
+  font-size: 28px;
+  color: #fff;
+}
+
+.form-container input {
+  width: 100%;
+  padding: 14px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
+.form-container button {
+  width: 100%;
+  padding: 14px;
+  border-radius: 8px;
+  border: none;
+  background: #00c6ff;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.form-container button:hover {
+  background: #0072ff;
+}
+
+.form-container .small-text {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.form-container .small-text a {
+  color: #00c6ff;
+  text-decoration: none;
+}
+
+.form-container .small-text a:hover {
+  text-decoration: underline;
+}
+
+.form-container input,
+.form-container select {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 15px;
+  box-sizing: border-box;
+}
