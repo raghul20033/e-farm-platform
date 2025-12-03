@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>E-Farm Platform</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+<body>
+  <!-- Header -->
+  <header class="main-header">
+    <div class="left-header">
+      <button class="location-trigger" onclick="openModal()">📍 Select Delivery Location</button>
+    </div>
+    <div class="logo">🌾 E-Farm</div>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Deals</a></li>
+        <li><a href="#">New Arrivals</a></li>
+      </ul>
+    </nav>
+    <div class="search">
+      <input type="text" placeholder="Search products..." />
+      <button>🔍</button>
+    </div>
+  </header>
+  
+
+  <!-- Main Layout -->
+  <main class="home-layout">
+    <!-- Sidebar -->
+    <section class="sidebar">
+      <h2>Login</h2>
+      <a href="admin/login.html" class="action-button">Admin Login</a>
+      <a href="farmer/login.html" class="action-button">Farmer Login</a>
+      <a href="customer/login.html" class="action-button">Customer Login</a>
+    </section>
+
+    <!-- Banner -->
+    <section class="main-banner">
+      <img src="img/home.jpg" alt="Farmer Market" class="banner-img">
+      <div class="banner-text">
+        <h1>Savor the Symphony of Farm Flavors</h1>
+        <p>Rice, Spices, Fruits, Pulses, Millets and more — Direct from Farmers</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Product Grid (placed outside .home-layout for full-width) -->
+  <section class="product-grid">
+  <div class="product-card">
+    <div class="product-discount">38% OFF</div>
+    <img src="img/capsicum.jfif" alt="Capsicum">
+    <div class="product-info">
+      <h3>Capsicum - Green (Loose)</h3>
+      <p class="price">₹151.5 <span class="old-price">₹244</span></p>
+      <a href="customer/register.html" class="add-btn">Add</a>
+
+    </div>
+  </div>
+
+  <div class="product-card">
+    <div class="product-discount">50% OFF</div>
+    <img src="img/carrot.jfif" alt="Carrot">
+    <div class="product-info">
+      <h3>Carrot - Orange (Loose)</h3>
+      <p class="price">₹70 <span class="old-price">₹139</span></p>
+      <a href="customer/register.html" class="add-btn">Add</a>
+    </div>
+  </div>
+
+  <!-- PRODUCT GRID -->
+
+
+  <div class="product-card">
+    <div class="product-discount">20% OFF</div>
+    <img src="img/cauliflower.jfif" alt="Cauliflower">
+    <div class="product-info">
+      <h3>Cauliflower</h3>
+      <p class="price">₹28.8 <span class="old-price">₹36</span></p>
+      <a href="customer/register.html" class="add-btn">Add</a>
+
+    </div>
+  </div>
+
+  <div class="product-card">
+    <div class="product-discount">24% OFF</div>
+    <img src="img/coriander.jfif" alt="Coriander">
+    <div class="product-info">
+      <h3>Coriander Leaves</h3>
+      <p class="price">₹37.6 <span class="old-price">₹49.5</span></p>
+      <a href="customer/register.html" class="add-btn">Add</a>
+
+    </div>
+  </div>
+
+  <div class="product-card">
+    <div class="product-discount">15% OFF</div>
+    <img src="img/tomato.jfif" alt="Tomato">
+    <div class="product-info">
+      <h3>Tomato (Loose)</h3>
+      <p class="price">₹40 <span class="old-price">₹47</span></p>
+      <a href="customer/register.html" class="add-btn">Add</a>
+
+    </div>
+  </div>
+
+  <div class="product-card">
+    <div class="product-discount">30% OFF</div>
+    <img src="img/potato.jfif" alt="Potato">
+    <div class="product-info">
+      <h3>Potato (Loose)</h3>
+      <p class="price">₹28 <span class="old-price">₹40</span></p>
+     
+      <a href="customer/register.html" class="add-btn">Add</a>
+
+    </div>
+  </div>
+
+  <div class="product-card">
+    <div class="product-discount">12% OFF</div>
+    <img src="img/onion.jfif" alt="Onion">
+    <div class="product-info">
+      <h3>Onion (Loose)</h3>
+      <p class="price">₹22 <span class="old-price">₹25</span></p>
+     
+      <a href="customer/register.html" class="add-btn">Add</a>
+
+    </div>
+  </div>
+
+  <div class="product-card">
+    <div class="product-discount">18% OFF</div>
+    <img src="img/beetroot.jfif" alt="Beetroot">
+    <div class="product-info">
+      <h3>Beetroot (Loose)</h3>
+      <p class="price">₹32 <span class="old-price">₹39</span></p>
+     
+      <a href="customer/register.html" class="add-btn">Add</a>
+
+    </div>
+  </div>
+
+  <div class="product-card">
+    <div class="product-discount">22% OFF</div>
+    <img src="img/beans.jfif" alt="Beans">
+    <div class="product-info">
+      <h3>French Beans</h3>
+      <p class="price">₹55 <span class="old-price">₹70</span></p>
+     
+      <a href="customer/register.html" class="add-btn">Add</a>
+
+    </div>
+  </div>
+
+  <div class="product-card">
+    <div class="product-discount">35% OFF</div>
+    <img src="img/broccoli.jfif" alt="Broccoli">
+    <div class="product-info">
+      <h3>Broccoli</h3>
+      <p class="price">₹98 <span class="old-price">₹150</span></p>
+     
+      <a href="customer/register.html" class="add-btn">Add</a>
+
+    </div>
+  </div>
+
+  <div class="product-card">
+    <div class="product-discount">40% OFF</div>
+    <img src="img/brinjal.jfif" alt="Brinjal">
+    <div class="product-info">
+      <h3>Brinjal (Eggplant)</h3>
+      <p class="price">₹45 <span class="old-price">₹75</span></p>
+    
+      <a href="customer/register.html" class="add-btn">Add</a>
+
+    </div>
+  </div>
+
+  <div class="product-card">
+    <div class="product-discount">10% OFF</div>
+    <img src="img/cabbage.jfif" alt="Cabbage">
+    <div class="product-info">
+      <h3>Cabbage</h3>
+      <p class="price">₹27 <span class="old-price">₹30</span></p>
+     
+      <a href="customer/register.html" class="add-btn">Add</a>
+
+    </div>
+  </div>
+
+  <div class="product-card">
+    <div class="product-discount">25% OFF</div>
+    <img src="img/ladyfinger.jfif" alt="Lady Finger">
+    <div class="product-info">
+      <h3>Lady Finger (Okra)</h3>
+      <p class="price">₹45 <span class="old-price">₹60</span></p>
+     
+      <a href="customer/register.html" class="add-btn">Add</a>
+
+    </div>
+  </div>
+
+  <div class="product-card">
+    <div class="product-discount">28% OFF</div>
+    <img src="img/cucumber.jfif" alt="Cucumber">
+    <div class="product-info">
+      <h3>Cucumber</h3>
+      <p class="price">₹18 <span class="old-price">₹25</span></p>
+     
+      <a href="customer/register.html" class="add-btn">Add</a>
+
+    </div>
+  </div>
+
+  <div class="product-card">
+    <div class="product-discount">45% OFF</div>
+    <img src="img/peas.jfif" alt="Green Peas">
+    <div class="product-info">
+      <h3>Green Peas</h3>
+      <p class="price">₹55 <span class="old-price">₹100</span></p>
+      
+      <a href="customer/register.html" class="add-btn">Add</a>
+
+    </div>
+  </div>
+
+  <div class="product-card">
+    <div class="product-discount">33% OFF</div>
+    <img src="img/pumpkin.jfif" alt="Pumpkin">
+    <div class="product-info">
+      <h3>Pumpkin</h3>
+      <p class="price">₹40 <span class="old-price">₹60</span></p>     
+      <a href="customer/register.html" class="add-btn">Add</a>
+
+    </div>
+  </div>
+
+  <div class="product-card">
+    <div class="product-discount">19% OFF</div>
+    <img src="img/mushroom.jfif" alt="Mushroom">
+    <div class="product-info">
+      <h3>Mushroom</h3>
+      <p class="price">₹80 <span class="old-price">₹99</span></p>  
+      <a href="customer/register.html" class="add-btn">Add</a>
+
+    </div>
+  </div>
+
+  <div class="product-card">
+    <div class="product-discount">29% OFF</div>
+    <img src="img/radish.jfif" alt="Radish">
+    <div class="product-info">
+      <h3>Radish (White)</h3>
+      <p class="price">₹25 <span class="old-price">₹35</span></p>      
+      <a href="customer/register.html" class="add-btn">Add</a>
+
+    </div>
+  </div>
+
+  <div class="product-card">
+    <div class="product-discount">21% OFF</div>
+    <img src="img/chillies.jfif" alt="Green Chillies">
+    <div class="product-info">
+      <h3>Green Chillies</h3>
+      <p class="price">₹35 <span class="old-price">₹44</span></p>
+      <a href="customer/register.html" class="add-btn">Add</a>
+
+    </div>
+  </div>
+  <div class="product-card">
+    <div class="product-discount">50% OFF</div>
+    <img src="img/spinach.jfif" alt="Spinach">
+    <div class="product-info">
+      <h3>Spinach (Palak)</h3>
+      <p class="price">₹15 <span class="old-price">₹30</span></p>
+     
+      <center><a href="customer/register.html" class="add-btn">Add</a></center>
+
+    </div>
+  </div>
+
+</div>
+<!-- END PRODUCT GRID -->
+
+
+  <!-- Add more product-card divs as needed -->
+</section>
+
+
+  <!-- Location Modal -->
+  <div class="location-modal" id="locationModal">
+    <div class="location-box">
+      <span class="close-btn" onclick="closeModal()">&times;</span>
+      <h2>Specify Your Location</h2>
+      <div class="option-group">
+        <label><input type="radio" name="mode" checked> Delivery</label>
+        <label><input type="radio" name="mode"> Pickup</label>
+      </div>
+      <p>Where do you want us to Deliver?</p>
+      <div class="location-input">
+        <button>📍 Current Location</button>
+        <input type="text" placeholder="Search locality or street name" />
+        <button class="confirm-btn">Confirm</button>
+      </div>
+      <div class="skip-wrap">
+        <button class="skip-btn" onclick="closeModal()">Skip For Now</button>
+      </div>
+      <p class="note">Note: Product availability, prices, and delivery options will vary based on the delivery location!</p>
+    </div>
+  </div>
+
+  <!-- Script -->
+  <script>
+    function openModal() {
+      document.getElementById("locationModal").style.display = "flex";
+    }
+    function closeModal() {
+      document.getElementById("locationModal").style.display = "none";
+    }
+  </script>
+  <script>
+  function openQuickView(productName) {
+    alert("Quick preview of: " + productName);
+    // Replace this alert with a modal later
+  }
+</script>
+
+</body>
+</html>
